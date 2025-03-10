@@ -2,47 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>A Farewell Love Story</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Love Story</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="background-overlay"></div>
-    <div class="container">
-        <header class="animate__animated animate__fadeIn">
-            <h1>Our Final Chapter</h1>
-            <h2>Five Moments, One Eternal Love</h2>
-        </header>
+    <div class="love-story-container">
+        <div class="background-overlay"></div>
+        
+        <div class="story-wrapper">
+            <div class="story-header">
+                <h1 class="story-title" id="story-title">Our Love Journey</h1>
+            </div>
 
-        <div class="story-carousel">
-            <div class="story-card animate__animated" id="story-card">
-                <div class="story-content">
-                    <h3 id="story-title">Our Journey</h3>
-                    <div id="story-text-container">
-                        <p id="story-text-preview"></p>
-                        <div id="story-text-full" class="story-full-text"></div>
-                    </div>
-                    <button id="read-more-btn" class="read-more-btn">Read More</button>
+            <div class="story-content-container">
+                <div class="story-image-container">
+                    <img id="story-image" src="" alt="Love Story Illustration" class="story-image">
                 </div>
-                <div class="story-navigation">
-                    <button id="prev-story">◀ Previous</button>
-                    <div class="page-indicator">
-                        <span id="current-page">1</span> / <span id="total-pages">1</span>
+
+                <div class="story-text-container">
+                    <div class="story-preview" id="story-preview"></div>
+                    <div class="story-full" id="story-full"></div>
+                    
+                    <div class="story-actions">
+                        <button id="read-more-btn" class="btn btn-primary">Read More</button>
                     </div>
-                    <button id="next-story">Next ▶</button>
                 </div>
             </div>
-        </div>
 
-        <div class="love-notes">
-            <div class="falling-petals"></div>
-            <p class="farewell-message animate__animated animate__pulse">
-                Some goodbyes are not the end, but a beautiful pause in our story.
-            </p>
+            <div class="story-navigation">
+                <button id="prev-story" class="btn btn-nav">◀ Previous</button>
+                <div class="story-progress">
+                    <span id="current-story">1</span> / <span id="total-stories">5</span>
+                </div>
+                <button id="next-story" class="btn btn-nav">Next ▶</button>
+            </div>
         </div>
     </div>
 
+    <script src="js/stories.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
