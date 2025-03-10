@@ -1,39 +1,150 @@
-/* Add these to your existing CSS */
-.story-full-text {
-    display: none;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out;
+:root {
+    --primary-color: #FF69B4;
+    --secondary-color: #FFB6C1;
+    --text-color: #4A4A4A;
+    --background-color: #FFF0F5;
 }
 
-.story-full-text.expanded {
-    display: block;
-    max-height: 1000px; /* Adjust as needed */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.love-story-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(135deg, 
+            rgba(255,105,180,0.2) 0%, 
+            rgba(255,182,193,0.1) 100%
+        ),
+        url('https://source.unsplash.com/1600x900/?romantic,love');
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    z-index: -1;
+}
+
+.story-wrapper {
+    background-color: rgba(255,255,255,0.9);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.story-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.story-title {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color);
+    font-size: 3rem;
+    letter-spacing: 1px;
+}
+
+.story-content-container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.story-image-container {
+    flex: 1;
+}
+
+.story-image {
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+    background-color: #F8E5E5;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.story-text-container {
+    flex: 2;
+}
+
+.story-preview, .story-full {
+    margin-bottom: 20px;
+    max-height: 300px;
     overflow-y: auto;
 }
 
-.read-more-btn {
-    background-color: var(--secondary-color);
+.btn {
+    padding: 12px 24px;
     border: none;
-    padding: 10px 15px;
-    margin-top: 15px;
-    border-radius: 5px;
+    border-radius: 30px;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-weight: 600;
 }
 
-.read-more-btn:hover {
+.btn-primary {
     background-color: var(--primary-color);
+    color: white;
 }
 
-.page-navigation {
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+}
+
+.story-navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 15px;
+    margin-top: 30px;
 }
 
-.page-indicator {
-    font-size: 1em;
+.btn-nav {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
     color: var(--primary-color);
+}
+
+.btn-nav:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.story-progress {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .story-content-container {
+        flex-direction: column;
+    }
+    
+    .story-image {
+        width: 100%;
+        max-width: 300px;
+    }
 }
