@@ -2,32 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>365 Love Stories </title>
+    <title>A Farewell Love Story</title>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <div class="background-overlay"></div>
     <div class="container">
-        <header>
-            <h1>365 Nights of Love</h1>
-            <h2>A Magical Journey for my dear ❤️</h2>
+        <header class="animate__animated animate__fadeIn">
+            <h1>Our Final Chapter</h1>
+            <h2>Five Moments, One Eternal Love</h2>
         </header>
 
-        <div id="stories-grid">
-            <!-- Stories will be dynamically generated here -->
+        <div class="story-carousel">
+            <div class="story-card animate__animated" id="story-card">
+                <div class="story-content">
+                    <h3 id="story-title">Our Journey</h3>
+                    <div id="story-text-container">
+                        <p id="story-text-preview"></p>
+                        <div id="story-text-full" class="story-full-text"></div>
+                    </div>
+                    <button id="read-more-btn" class="read-more-btn">Read More</button>
+                </div>
+                <div class="story-navigation">
+                    <button id="prev-story">◀ Previous</button>
+                    <div class="page-indicator">
+                        <span id="current-page">1</span> / <span id="total-pages">1</span>
+                    </div>
+                    <button id="next-story">Next ▶</button>
+                </div>
+            </div>
         </div>
 
-        <div class="story-modal" id="storyModal">
-            <div class="modal-content">
-                <span class="close-btn">&times;</span>
-                <h3 id="modal-story-title"></h3>
-                <p id="modal-story-text"></p>
-                <div id="story-date"></div>
-            </div>
+        <div class="love-notes">
+            <div class="falling-petals"></div>
+            <p class="farewell-message animate__animated animate__pulse">
+                Some goodbyes are not the end, but a beautiful pause in our story.
+            </p>
         </div>
     </div>
 
-    <script src="js/stories.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
