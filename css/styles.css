@@ -1,0 +1,39 @@
+/* Add these to your existing CSS */
+.story-full-text {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+.story-full-text.expanded {
+    display: block;
+    max-height: 1000px; /* Adjust as needed */
+    overflow-y: auto;
+}
+
+.read-more-btn {
+    background-color: var(--secondary-color);
+    border: none;
+    padding: 10px 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background-color: var(--primary-color);
+}
+
+.page-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.page-indicator {
+    font-size: 1em;
+    color: var(--primary-color);
+}
